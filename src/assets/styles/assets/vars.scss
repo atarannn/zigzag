@@ -1,0 +1,139 @@
+$default-font: "DelaGothicOne", sans-serif;
+$default-font2: "Manrope", sans-serif;
+
+
+$bg: #f3f3f3;
+
+$wc: #FFFFFF;
+$bc: #1D1D1B;
+
+:root {
+  --white-color: #ffffff;
+  --blue-color: #2763E8;
+  --pink-color: #FF64CA;
+  --yellow-color: #F3FF0F;
+
+  --font-size-100: 100px;
+  --font-size-54: 54px;
+  --font-size-48: 48px;
+  --font-size-42: 42px;
+  --font-size-32: 32px;
+  --font-size-28: 28px;
+  --font-size-24: 24px;
+  --font-size-14: 14px;
+
+  --fields: 50px;
+
+  --offset-60: 60px;
+  --offset-40: 40px;
+  --offset-20: 20px;
+
+  --blocks-offset-150: 150px;
+  --blocks-offset-100: 100px;
+  --blocks-offset-50: 50px;
+
+  --btn-rotate: -2.913deg;
+
+  --header-h: 100px;
+
+  --header-decor: 59px;
+  --header-offset: 80px;
+
+
+  --text-0: 155px;
+  --text-1: 167px;
+  --text-2: 206px;
+  --text-3: 369px;
+  --text-4: 809px;
+  --text-5: 396px;
+  --text-6: 252px;
+}
+
+@media screen and (max-width: 1600px) {
+  :root {
+    --font-size-100: 64px;
+    --font-size-54: 42px;
+    --font-size-48: 32px;
+    --font-size-42: 28px;
+    --font-size-32: 22px;
+    --font-size-28: 18px;
+    --font-size-24: 18px;
+
+    --offset-60: 40px;
+    --offset-40: 30px;
+    --offset-20: 10px;
+
+    --blocks-offset-50: 30px;
+
+    --header-h: 78px;
+    --header-decor: 30px;
+
+    --text-0: 100px;
+    --text-1: 110px;
+    --text-2: 140px;
+    --text-3: 240px;
+    --text-4: 510px;
+    --text-5: 250px;
+    --text-6: 170px;
+  }
+}
+
+@media screen and (max-width: 1024px){
+  :root {
+    --font-size-100: 36px;
+    --font-size-54: 30px;
+    --font-size-48: 20px;
+    --font-size-42: 17px;
+    --font-size-32: 16px;
+    --font-size-28: 15px;
+    --font-size-24: 16px;
+
+    --fields: 30px;
+
+    --offset-40: 20px;
+
+    --blocks-offset-150: 100px;
+    --blocks-offset-100: 40px;
+    --blocks-offset-50: 20px;
+
+    --header-h: 64px;
+    --header-offset: 60px;
+
+    --text-0: 56px;
+    --text-1: 57px;
+    --text-2: 74px;
+    --text-3: 120px;
+    --text-4: 280px;
+    --text-5: 140px;
+    --text-6: 100px;
+  }
+}
+
+@media screen and (max-width: 680px){
+  :root {
+    --font-size-100: 28px;
+    --font-size-54: 16px;
+    --font-size-48: 15px;
+    --font-size-42: 15px;
+    --font-size-32: 15px;
+    --font-size-28: 15px;
+    --font-size-24: 14px;
+    --font-size-14: 12px;
+
+    --fields: 16px;
+
+    --blocks-offset-150: 80px;
+
+    --header-h: 58px;
+    --header-decor: 11px;
+    --header-offset: 20px;
+
+    --text-0: 28px;
+    --text-1: 30px;
+    --text-2: 38px;
+    --text-3: 68px;
+    --text-4: 150px;
+    --text-5: 70px;
+    --text-6: 48px;
+  }
+}

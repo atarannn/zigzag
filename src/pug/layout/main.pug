@@ -1,0 +1,38 @@
+include ../includes/mixins.pug
+-
+  var pagesLink = [
+  {
+  home: '/'
+  }
+  ];
+block variable
+doctype html
+html(lang="uk" data-mode="dev")
+  head
+    meta(charset='utf-8')
+    meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0")
+    meta(name='format-detection', content='telephone=no')
+    meta(name='format-detection', content='date=no')
+    meta(name='format-detection', content='address=no')
+    meta(name='format-detection', content='email=no')
+    meta(content='notranslate', name='google')
+    link(rel='icon', type='image/png', sizes='16x16', href='../static/favicon.ico')
+    block meta
+    block head
+
+  body(class= class_page id= id_page)
+    include ../includes/loader.html
+    include ../../assets/svg-sprite/sprite/symbol_sprite.php
+    include ../includes/form-thanks
+    .toast-wrapper(data-toast-wrapper)
+    block header
+    .page__inner(data-scroll-container)
+      .page__content
+        a(href="https://t.me/grupasmartbot?start=64be9c7d37f3ce5d7109d013" target="_blank").telegram
+          <svg width="175" height="174" viewBox="0 0 175 174" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M127.248 165.942L96.4621 174H79.0852L54.4566 167.854L30.7858 153.377L13.5457 134.939L3.83112 112.267L0 91.5071L1.77873 67.606L12.1775 43.7049L29.1439 21.3061L49.5309 9.01413L80.3167 0L109.461 2.86813L135.731 12.9749L160.36 38.1052L171.716 60.7771L175 87.4097L169.801 117.32L154.203 144.499L127.248 165.942Z" fill="#28A8E9"/>
+          <path d="M114.898 103.75L120.223 68.75L121 59.5455L120.223 56.8182L118.337 55H114.232L109.239 56.8182L45.9971 84.8864L44 86.8182V89.0909L51.2118 92.5L60.1988 94.5455H65.3026L68.964 92.5L99.8084 71.7045H101.473V74.0909L77.951 98.5227V101.591L79.0605 103.182L86.4942 108.182L104.468 120H109.239L112.346 116.477L114.898 103.75Z" fill="white"/>
+          </svg>
+        block content
+      block footer
+    block scripts

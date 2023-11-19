@@ -1,0 +1,114 @@
+
+extends ../layout/main
+block variable
+  -
+    var title_page = 'location'
+    var id_page = 'id-page-location'
+    var class_page = 'class-page-location'
+    var breadcrumbsSubitem = [
+      {
+        label: 'location',
+        link: pagesLink[0].location
+      }
+    ]
+
+block meta
+  title= title_page
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/libs.js')
+  script(defer src='./assets/scripts/vendors.bundle.js')
+  script(defer src='./assets/scripts/index.bundle.js')
+  script(defer src='./assets/scripts/header.bundle.js')
+  script(defer src='./assets/scripts/index.js')
+  script(defer src='./assets/scripts/loader.js')
+  script(defer src='./assets/scripts/location-slider-mobile.js')
+  script(defer src='./assets/scripts/location-animation.js')
+  script(defer src='./assets/scripts/footer-animation.js')
+
+block content
+  .page__inner-title
+    picture
+      source(srcset="./assets/images/home/section-5/title.png" media="(min-width: 680px)")
+      img(src="./assets/images/home/section-5/title-680.png" alt="title").title
+  .location__wrapper
+    section.location__section-1
+      img(src="./assets/images/home/section-5/pin-1.png" alt="title").decor
+      .text__wrapper
+        .manrope-text-28-normal Урбан простір "Зиґ Заґ" розташований майже в самому центрі Рівного, поруч з основними транспортними розвʼязками міста.
+        .manrope-text-28-normal Це відкриває вам безпосередній доступ до ключових об’єктів та подій міста, забезпечуючи максимальну зручність і відчуття активного міського життя.
+    section.location__section-2-mobile
+      .location-swiper-mobile.swiper-container
+        .swiper-wrapper
+          .swiper-slide.location__section-2__card.card-1
+              img(src="./assets/images/location/bg-1.svg" alt="bg").bg
+              .location__section-2__card__text
+                img(src="./assets/images/location/1.svg" alt="img").img
+                .dela-text-32 8 хвилин
+                .manrope-text-24-normal до дитячого садка
+          .swiper-slide.location__section-2__card.card-2
+              img(src="./assets/images/location/bg-2.svg" alt="bg").bg
+              .location__section-2__card__text
+                img(src="./assets/images/location/2.svg" alt="img").img
+                .dela-text-32 10 хвилин
+                .manrope-text-24-normal до торгового центру
+          .swiper-slide.location__section-2__card.card-3
+              img(src="./assets/images/location/bg-3.svg" alt="bg").bg
+              .location__section-2__card__text
+                img(src="./assets/images/location/3.svg" alt="img").img
+                .dela-text-32 2 хвилини
+                .manrope-text-24-normal до парку
+          .swiper-slide.location__section-2__card.card-4
+              img(src="./assets/images/location/bg-4.svg" alt="bg").bg
+              .location__section-2__card__text
+                img(src="./assets/images/location/4.svg" alt="img").img
+                .dela-text-32 8 хвилин
+                .manrope-text-24-normal до школи
+          .swiper-slide.location__section-2__card.card-5
+              img(src="./assets/images/location/bg-5.svg" alt="bg").bg
+              .location__section-2__card__text
+                img(src="./assets/images/location/5.svg" alt="img").img
+                .dela-text-32 10 хвилин
+                .manrope-text-24-normal до медичних закладів
+    section.location__section-2
+      .location__section-2__card.card-1
+        img(src="./assets/images/location/bg-1.svg" alt="bg").bg
+        .location__section-2__card__text
+          img(src="./assets/images/location/1.svg" alt="img").img
+          .dela-text-32 8 хвилин
+          .manrope-text-24-normal до дитячого садка
+      .location__section-2__card.card-2
+        img(src="./assets/images/location/bg-2.svg" alt="bg").bg
+        .location__section-2__card__text
+          img(src="./assets/images/location/2.svg" alt="img").img
+          .dela-text-32 10 хвилин
+          .manrope-text-24-normal до торгового центру
+      .location__section-2__card.card-3
+        img(src="./assets/images/location/bg-3.svg" alt="bg").bg
+        .location__section-2__card__text
+          img(src="./assets/images/location/3.svg" alt="img").img
+          .dela-text-32 2 хвилини
+          .manrope-text-24-normal до парку
+      .location__section-2__card.card-4
+        img(src="./assets/images/location/bg-4.svg" alt="bg").bg
+        .location__section-2__card__text
+          img(src="./assets/images/location/4.svg" alt="img").img
+          .dela-text-32 8 хвилин
+          .manrope-text-24-normal до школи
+      .location__section-2__card.card-5
+        img(src="./assets/images/location/bg-5.svg" alt="bg").bg
+        .location__section-2__card__text
+          img(src="./assets/images/location/5.svg" alt="img").img
+          .dela-text-32 10 хвилин
+          .manrope-text-24-normal до медичних закладів
+    section.location__section-3
+      img(src="./assets/images/home/section-5/decor-top.png" alt="decor").decor-top
+      img(src="./assets/images/home/section-5/map.jpg" alt="map").map
+      img(src="./assets/images/home/section-5/decor-bottom.png" alt="decor").decor-bottom
+block footer
+  include ../includes/footer.pug
+
+block header
+  include ../includes/header.pug

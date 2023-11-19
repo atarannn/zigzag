@@ -1,0 +1,55 @@
+footer
+  .contacts
+    .title__wrapper
+      picture.all-pages__footer
+        source(srcset="./assets/images/footer/title.png" media="(min-width: 680px)")
+        img(src="./assets/images/footer/title-680.png").title
+      picture.contacts-page__footer
+        source(srcset="./assets/images/footer/title.png" media="(min-width: 1024px)")
+        img(src="./assets/images/footer/title-680.png").title
+    .form__wrapper
+      picture.all-pages__footer
+        source(srcset="./assets/images/footer/form-bg.svg" media="(min-width: 680px)")
+        img(src="./assets/images/footer/form-bg-680.svg").bg
+      picture.contacts-page__footer
+        source(srcset="./assets/images/footer/form-bg.svg" media="(min-width: 1024px)")
+        source(srcset="./assets/images/footer/form-bg-1024.svg" media="(min-width: 680px)")
+        img(src="./assets/images/footer/form-bg-680.svg").bg
+      include ../components/form/form
+  .footer
+    .footer__top
+      .col
+        .dela-text-42 центр продажу
+        .col-2
+          a(href="https://maps.app.goo.gl/WdKvaj3D31E4AU7V8" target="_blank").manrope-text-24.link--hover-2
+            span м. Рівне, вул. Біла 1Б (навпроти РЗВА)
+          .manrope-text-24.col-3
+            span Час роботи: Пн - Пт, 9:00 - 20:00,
+            span Сб, 9:00 - 18:00, Нд, 10:00 - 16:00
+      .col
+        .dela-text-42 Social
+        .col-2
+          a(href="https://www.facebook.com/zigzag.grupasmart" target="_blank").manrope-text-24.link--hover-2
+            span Facebook
+          a(href="https://www.instagram.com/suburbia.gs/" target="_blank").manrope-text-24.link--hover-2
+            span Instagram
+          a(href="https://www.youtube.com/@grupasmart8639" target="_blank").manrope-text-24.link--hover-2
+            span Youtube
+      .col
+        .dela-text-42 Телефон
+        .col-2
+          a(href="tel:+380672525225").manrope-text-24.link--hover-2
+            span + 38 067 25 25 225
+        a(href="mailto:grupasmartrv@gmail.com").manrope-text-24.link--hover-2.tablet-mobile
+          span grupasmartrv@gmail.com
+      .col
+        .dela-text-42 Email
+        .col-2
+          a(href="mailto:grupasmartrv@gmail.com").manrope-text-24.link--hover-2
+            span grupasmartrv@gmail.com
+    .footer__bottom
+      .footer__bottom-text.left
+        span Ⓒ Усі права захищені
+      .footer__bottom-text.center Всі тексти, зображення, графіка, логотипи та інші матеріали на цьому сайті охороняються законами про авторські права.
+      a(href="https://smarto.agency/?utm_source=referral&utm_medium=${window.location.host}" target="_blank")
+        img(src="./assets/images/smarto-logo.svg").smarto-logo

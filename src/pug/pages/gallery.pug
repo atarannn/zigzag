@@ -1,0 +1,99 @@
+
+extends ../layout/main
+block variable
+  -
+    var title_page = 'gallery'
+    var id_page = 'id-page-gallery'
+    var class_page = 'class-page-gallery'
+    var breadcrumbsSubitem = [
+      {
+        label: 'gallery',
+        link: pagesLink[0].gallery
+      }
+    ]
+    var slider = [
+      { img: 'gallery/slider-1/1.jpg' },
+      { img: 'gallery/slider-1/1.jpg' },
+      { img: 'gallery/slider-1/1.jpg' },
+      { img: 'gallery/slider-1/1.jpg' }
+    ]
+
+block meta
+  title= title_page
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/libs.js')
+  script(defer src='./assets/scripts/vendors.bundle.js')
+  script(defer src='./assets/scripts/index.bundle.js')
+  script(defer src='./assets/scripts/header.bundle.js')
+  script(defer src='./assets/scripts/index.js')
+  script(defer src='./assets/scripts/loader.js')
+  script(defer src='./assets/scripts/gallery-slider.js')
+  script(defer src='./assets/scripts/gallery-animation.js')
+  script(defer src='./assets/scripts/footer-animation.js')
+
+block content
+  .page__inner-title
+    img(src='./assets/images/gallery/title-decor-4.png' alt='decor').decor-4
+    .title__wrapper
+      img(src='./assets/images/gallery/title.png' alt='title').title
+      img(src='./assets/images/gallery/title-decor-1.png' alt='decor').decor-1
+      img(src='./assets/images/gallery/title-decor-2.png' alt='decor').decor-2
+      img(src='./assets/images/gallery/title-decor-3.png' alt='decor').decor-3
+  .gallery-section-1
+    img(src='./assets/images/gallery/decor-top.png' alt='decor').decor-top
+    img(src='./assets/images/gallery/decor-bottom.png' alt='decor').decor-bottom
+    .gallery-section-1-btn
+      button(data-view="complex").dela-text-42 комплекс
+      button(data-view="lobby").dela-text-42 лоббі
+      button(data-view="yard").dela-text-42 двір
+      button(data-view="roof").dela-text-42 дах
+    .gallery-section-1-swiper.swiper-container
+      .swiper-wrapper
+      .moving-arrow
+        +svg('gallery-arrow')
+      .gallery-section-1-swiper-btn-mob
+        +svg('gallery-arrow').btn-mob(data-prev-btn-1)
+        +svg('gallery-arrow').btn-mob(data-next-btn-1)
+  .gallery-section-2
+    .gallery-section-2__top
+      .col
+        .dela-text-100 ВІДКРИТИЙ
+        .dela-text-100 ПРОСТІР
+      .gallery-section-2__top__swiper-btn
+        +svg('gallery-arrow').btn(data-prev-btn-2)
+        .gallery-slider__amount
+          .gallery-slider__current.dela-text-24
+            span(data-current-num)
+          span.slider__divider.dela-text-24 /
+          span.slider__all.dela-text-24(data-total-num)
+        +svg('gallery-arrow').btn(data-next-btn-2)
+    .gallery-section-2-swiper.swiper-container
+      .swiper-wrapper
+        .swiper-slide
+          img(src='./assets/images/gallery/slider-2/1-bg.png' alt='decor').decor
+          img(src='./assets/images/gallery/slider-2/1.png' alt='img').img
+          .swiper-slide__right
+            .dela-text-48 Відпочинок на висоті
+            .manrope-text-28-normal Що може бути кращим за власну відкриту зону з захоплюючим видом на місто? Саме тому ми створили для вас місце, яке ви не захочете покидати. Це ідеальне місце для смачного сніданку, затишної вечері та запашної кави на відкритому повітрі.
+        .swiper-slide
+          img(src='./assets/images/gallery/slider-2/2-bg.png' alt='decor').decor
+          img(src='./assets/images/gallery/slider-2/2.png' alt='img').img
+          .swiper-slide__right
+            .dela-text-48 Бізнес на висоті
+            .manrope-text-28-normal Відкривши свій власний бізнес, кав'ярню або творчу майстерню тут, ви отримаєте чудову можливість використовувати переваги прекрасної локації з виглядом на місто. Ваші клієнти будуть насолоджуватися комфортом та зручностями, а ви зможете використовувати переваги урбан простору.
+        .swiper-slide
+          img(src='./assets/images/gallery/slider-2/3-bg.png' alt='decor').decor
+          img(src='./assets/images/gallery/slider-2/3.png' alt='img').img
+          .swiper-slide__right
+            .dela-text-48 Робота на висоті
+            .manrope-text-28-normal Власний робочий простір на даху в житловому комплексі "Зиґ Заґ" - це унікальна можливість об'єднати комфорт і спокій оточення з можливістю працювати продуктивно та надихаюче. Тут ви можете насолоджуватися панорамними видами, свіжим повітрям та зручними робочими умовами, створюючи ідеальне середовище для творчості та продуктивної роботи.
+
+
+block footer
+  include ../includes/footer.pug
+
+block header
+  include ../includes/header.pug

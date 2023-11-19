@@ -1,0 +1,38 @@
+extends ../layout/main
+block variable
+  -
+    var title_page = '404'
+    var id_page = 'id-page-404'
+    var class_page = 'class-page-404'
+block meta
+  title= title_page
+  meta(name='description', content='')
+block head
+  link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/libs.js')
+  script(defer src='./assets/scripts/vendors.bundle.js')
+  script(defer src='./assets/scripts/index.bundle.js')
+  script(defer src='./assets/scripts/header.bundle.js')
+  script(defer src='./assets/scripts/index.js')
+  script(defer src='./assets/scripts/loader.js')
+  script(defer src='./assets/scripts/404.js')
+  script(defer src='./assets/scripts/footer-animation.js')
+block content
+  .page-404-wrapper
+    img(src="./assets/images/404/bg.png").bg
+    .page-404-info
+      .page-404-info-left
+        img(src="./assets/images/404/1.png").img
+      .page-404-info-right
+        .title-404 404
+        .dela-text-42.subtitle-404 Упс, щось пішло не так...
+        .page-404-btn-wrapper
+          a(href="#").link-style#go-back
+            span назад ↗
+          a(href="index.html").link-style
+            span на головну ↗
+
+
+block header
+  include ../includes/header.pug
