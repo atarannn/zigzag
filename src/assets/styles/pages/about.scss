@@ -614,6 +614,7 @@
       .decor-bottom {
         bottom: 0;
         height: 30px;
+        object-fit: cover;
       }
 
       @include to(680px) {
