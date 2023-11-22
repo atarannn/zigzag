@@ -5,7 +5,8 @@ const config = {
   mode: 'development',
   entry: {
     index: './src/assets/scripts/index-app.js',
-    header: './src/assets/scripts/gulp-modules/header.js'
+    header: './src/assets/scripts/gulp-modules/header.js',
+    home: './src/assets/scripts/gulp-modules/home-animation.js'
   },
   output: {
     filename: '[name].bundle.js',

@@ -427,6 +427,10 @@
   animation: marquee 15s linear infinite;
   will-change: transform;
   padding: 10px 0;
+
+  @include to(680px) {
+    animation: marquee 35s linear infinite;
+  }
 }
 
 @keyframes marquee {

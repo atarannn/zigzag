@@ -517,7 +517,7 @@
 
     @include to(680px) {
       margin: var(--blocks-offset-150) 0 0;
-      height: calc(100vh - var(--header-decor) - var(--header));
+      height: calc(100vh - var(--header-decor) - var(--header-h));
     }
 
     .block-style-column {
@@ -596,6 +596,7 @@
     .block-style-column__info-wrapper--mobile {
       display: none;
       width: 100%;
+      height: 100%;
 
       .decor-top, .decor-bottom {
         width: 100%;
