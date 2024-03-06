@@ -1,0 +1,226 @@
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  //overflow-x: hidden;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  position: relative;
+  overflow-x: hidden;
+
+  .contacts-page__footer {
+    display: none;
+  }
+
+  .all-pages__footer {
+    display: flex;
+  }
+
+  .title__wrapper {
+    width: 100%;
+    padding: 0 var(--fields);
+    position: absolute;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    z-index: -1;
+
+    .title {
+      width: auto;
+
+      @include to(1600px) {
+        height: 450px;
+      }
+
+      @include to(1024px) {
+        height: 280px;
+      }
+
+      @include to(680px) {
+        height: 44px;
+      }
+    }
+
+    @include to(680px) {
+      position: static;
+    }
+  }
+
+  .form__wrapper {
+    width: 60%;
+    margin-left: auto;
+    margin-top: 12%;
+    position: relative;
+
+    @include to(680px) {
+      width: 100%;
+      margin-top: var(--offset-40);
+    }
+
+    .bg {
+      width: 100%;
+      pointer-events: none;
+      z-index: -1;
+    }
+  }
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  padding: 0 var(--fields);
+  margin-top: var(--blocks-offset-100);
+
+  &__top {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    @include to(1024px) {
+      align-items: stretch;
+      height: auto;
+    }
+
+    @include to(680px) {
+      flex-wrap: wrap;
+    }
+
+    .col {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      width: auto;
+
+      &:last-child {
+        @include to(1024px) {
+          display: none;
+        }
+      }
+
+      &:first-child {
+        @include to(680px) {
+          width: 100%;
+          margin-bottom: var(--offset-40);
+        }
+      }
+
+      @include to(1024px) {
+        height: auto;
+      }
+
+      @include to(680px) {
+        width: calc(50% - var(--fields)/2);
+      }
+
+      .dela-text-42 {
+        text-align: left;
+        max-width: 70%;
+      }
+
+      .tablet-mobile {
+        display: none;
+
+        @include to(1024px) {
+          display: flex;
+          margin-top: auto;
+        }
+      }
+
+      .col-2 {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        margin-top: var(--offset-40);
+
+        .col-3 {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: flex-start;
+        }
+
+        .manrope-text-24 {
+          margin-bottom: var(--offset-20);
+          text-align: left;
+
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+
+          svg {
+            order: 1;
+          }
+
+          .manrope-text-header {
+            order: 2;
+          }
+
+          @include to(680px) {
+            margin-bottom: 5px;
+          }
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: var(--blocks-offset-150);
+
+    .smarto-logo {
+      width: 52px;
+      height: 57px;
+    }
+
+    &-text {
+      color: rgba(255, 255, 255, 0.5);
+      font-family: $default-font2;
+      font-size: var(--font-size-14);
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+
+      &.left {
+        text-align: left;
+      }
+
+      &.center {
+        text-align: center;
+        max-width: 30%;
+
+        @include to(1600px) {
+          max-width: 40%;
+        }
+
+        @include to(1024px) {
+          max-width: 60%;
+        }
+
+        @include to(680px) {
+          display: none;
+        }
+      }
+    }
+  }
+}

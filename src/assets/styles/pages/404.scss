@@ -1,0 +1,134 @@
+.page-404-wrapper {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  .bg {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    z-index: -1;
+    pointer-events: none;
+  }
+
+  .page-404-info {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 0 var(--fields);
+    height: auto;
+
+    @include to(1024px) {
+      flex-direction: column-reverse;
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+    &-left {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      width: calc(50% - var(--offset-40));
+
+      @include to(1024px) {
+        width: 100%;
+        justify-content: center;
+        margin-top: var(--blocks-offset-100);
+      }
+
+      .img {
+        margin-top: auto;
+        height: calc(100vh - var(--header-h) - var(--header-decor) - var(--blocks-offset-100));
+        width: auto;
+        z-index: 0;
+        pointer-events: none;
+
+        @include to(1024px) {
+          height: 50vh;
+        }
+
+        @include to(680px) {
+          height: auto;
+        }
+      }
+    }
+
+    &-right {
+      width: calc(50% - var(--offset-40));
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      padding-top: 5%;
+
+      @include to(1024px) {
+        width: 100%;
+        padding-top: 0;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .title-404 {
+        color: var(--white-color);
+        font-family: $default-font;
+        font-size: 220px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 90%;
+        text-transform: uppercase;
+        text-align: left;
+
+        @include to(1600px) {
+          font-size: 140px;
+        }
+
+        @include to(1024px) {
+          text-align: center;
+        }
+
+        @include to(680px) {
+          font-size: 90px;
+        }
+      }
+
+      .subtitle-404 {
+        margin: var(--offset-40) 0;
+        text-align: left;
+
+        @include to(1024px) {
+          text-align: center;
+        }
+      }
+
+      .page-404-btn-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        @include to(1024px) {
+          justify-content: center;
+        }
+
+        .link-style {
+          margin-right: var(--offset-40);
+
+          &:last-child {
+            margin-right: 0;
+          }
+
+          span {
+            font-size: var(--font-size-24);
+            color: var(--yellow-color);
+            border-bottom: 1px solid var(--yellow-color);
+          }
+        }
+      }
+    }
+  }
+}

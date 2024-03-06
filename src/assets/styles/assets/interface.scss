@@ -1,0 +1,314 @@
+.telegram {
+  position: fixed;
+  right: var(--fields);
+  bottom: 5%;
+  z-index: 200;
+
+  svg {
+    width: 80px;
+    height: 80px;
+    transition: transform .3s ease-in-out;
+
+    @include to(1600px) {
+      height: 70px;
+      width: 70px;
+    }
+
+    @include to(680px) {
+      height: 50px;
+      width: 50px;
+    }
+  }
+
+  @include from(1023px) {
+    &:hover {
+      svg {
+        transform: scale(1.1);
+        transition: transform .3s ease-in-out;
+      }
+    }
+  }
+}
+
+.page__inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+  min-height: 100vh;
+  height: auto;
+  background-blend-mode: overlay;
+  overflow-x: hidden;
+
+  .page__content {
+		flex-grow: 1;
+	}
+	.page__footer-wrapper {
+		flex-shrink: 0;
+	}
+}
+
+.page__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.page__inner-title {
+  width: 100%;
+  padding: calc(var(--header-h) + var(--blocks-offset-100)) var(--fields) 0;
+}
+
+.dela-text-100 {
+  color: var(--white-color);
+  font-family: $default-font;
+  font-size: var(--font-size-100);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 90%; /* 90px */
+  text-transform: uppercase;
+}
+
+.dela-text-48 {
+  color: var(--white-color);
+  font-family: $default-font;
+  font-size: var(--font-size-48);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  text-transform: uppercase;
+}
+
+.dela-text-42 {
+  color: var(--white-color);
+  font-family: $default-font;
+  font-size: var(--font-size-42);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  text-transform: uppercase;
+}
+
+.dela-text-32 {
+  color: var(--white-color);
+  font-family: $default-font;
+  font-size: var(--font-size-32);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  text-transform: uppercase;
+}
+
+.dela-text-24 {
+  color: var(--white-color);
+  font-family: $default-font;
+  font-size: var(--font-size-24);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  text-transform: uppercase;
+}
+
+.manrope-text-header {
+  color: var(--white-color);
+  font-family: $default-font2;
+  font-size: var(--font-size-28);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+}
+
+.manrope-text-48-normal {
+  color: var(--white-color);
+  font-family: $default-font2;
+  font-size: var(--font-size-48);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 39.2px */
+}
+
+.manrope-text-28 {
+  color: var(--white-color);
+  font-family: $default-font2;
+  font-size: var(--font-size-28);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 39.2px */
+  text-transform: uppercase;
+}
+
+.manrope-text-28-normal {
+  color: var(--white-color);
+  font-family: $default-font2;
+  font-size: var(--font-size-28);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 39.2px */
+}
+
+.manrope-text-24 {
+  color: var(--white-color);
+  font-family: $default-font2;
+  font-size: var(--font-size-24);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.manrope-text-24-normal {
+  color: var(--white-color);
+  font-family: $default-font2;
+  font-size: var(--font-size-24);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.btn-style {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: auto;
+
+  &:hover {
+    @include from(1023px) {
+      svg {
+        animation: btnHover 1.5s linear infinite;
+      }
+    }
+  }
+
+  &.btn-style-2 {
+    .svg-pink {
+      @include to(1024px) {
+        width: 258px;
+      }
+
+      @include to(680px) {
+        width: 191px;
+      }
+    }
+  }
+
+  .svg-blue {
+    width: 424px;
+    height: 154px;
+
+    @include to(1600px) {
+      width: 271px;
+      height: 105px;
+    }
+
+    @include to(1024px) {
+      width: 240px;
+      height: 88px;
+    }
+
+    @include to(680px) {
+      width: 191px;
+      height: 62px;
+    }
+  }
+
+  .svg-pink {
+    height: 153px;
+    width: 454px;
+
+    @include to(1600px) {
+      height: 105px;
+      width: 322px;
+    }
+
+    @include to(1024px) {
+      height: 88px;
+      width: 332px;
+    }
+
+    @include to(680px) {
+      height: 62px;
+      width: 240px;
+    }
+  }
+
+  span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    padding: 0 10px;
+
+    color: var(--white-color);
+    font-family: $default-font;
+    font-size: var(--font-size-24);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    text-transform: uppercase;
+    text-align: center;
+  }
+}
+
+.link-style {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  @include to(680px) {
+    border-bottom: 1px solid var(--white-color);
+  }
+
+  span {
+    color: var(--white-color);
+    font-family: $default-font;
+    font-size: var(--font-size-48);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    text-transform: uppercase;
+    text-align: left;
+  }
+
+  &:hover {
+    @include from(1023px) {
+      span {
+        animation: linkHover 1s linear infinite;
+      }
+    }
+  }
+}
+
+[lang="en"] {
+  .btn-style {
+    .svg-pink {
+      @include to(1600px) {
+        width: 382px;
+      }
+      @include to(1024px) {
+        width: 342px;
+      }
+
+      @include to(680px) {
+        width: 290px;
+      }
+    }
+  }
+}
+
+.video-mob {
+  display: none;
+
+  @include to(1024px) {
+    display: flex;
+  }
+}
+
+.video-desk {
+  display: flex;
+
+  @include to(1024px) {
+    display: none;
+  }
+}

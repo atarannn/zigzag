@@ -1,0 +1,142 @@
+@import "vars";
+
+.mfp-3d-unfold {
+	.mfp-content {
+		perspective: 2000px;
+	}
+
+	.mfp-with-anim {
+		opacity: 0;
+		transition: all 0.3s ease-in-out;
+		transform-style: preserve-3d;
+		transform: rotateY(-60deg);
+	}
+
+	.mfp-bg {
+		opacity: 0;
+		transition: all 0.5s;
+	}
+}
+
+.mfp-ready {
+	.mfp-with-anim {
+		opacity: 1;
+		transform: rotateY(0deg);
+	}
+
+	.mfp-bg {
+		opacity: 0.8;
+	}
+}
+
+.mfp-removing {
+	.mfp-with-anim {
+		transform: rotateY(60deg);
+		opacity: 0;
+	}
+
+	.mfp-bg {
+		opacity: 0;
+	}
+}
+
+
+@keyframes scroll {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(0, 40%);
+  }
+}
+
+@keyframes btnHover {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  20% {
+    transform: rotate(2deg) scale(1.01);
+  }
+  40% {
+    transform: rotate(0deg) scale(1);
+  }
+  60% {
+    transform: rotate(-2deg) scale(1.01);
+  }
+  80% {
+    transform: rotate(0deg) scale(1);
+  }
+  80% {
+    transform: rotate(2deg) scale(1.01);
+  }
+}
+
+@keyframes linkHover {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(2deg);
+  }
+  10% {
+    transform: rotate(0deg);
+  }
+}
+
+.link--hover {
+  position: relative;
+
+  &:before {
+    content: "";
+    background: var(--white-color);
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    top: 110%;
+    left: 0;
+    pointer-events: none;
+    transform-origin: 100% 50%;
+    transform: scale3d(0, 1, 1);
+    transition: transform 0.2s ease-in-out;
+  }
+
+  @include from(1023px) {
+    &:hover {
+      &:before {
+        transform-origin: 0% 50%;
+        transform: scale3d(1, 1, 1);
+      }
+    }
+  }
+}
+
+.link--hover-2 {
+  span {
+    position: relative;
+
+    &:before {
+      content: "";
+      background: var(--white-color);
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      top: 110%;
+      left: 0;
+      pointer-events: none;
+      transform-origin: 100% 50%;
+      transform: scale3d(0, 1, 1);
+      transition: transform 0.2s ease-in-out;
+    }
+  }
+
+  @include from(1023px) {
+    &:hover {
+      span {
+        &:before {
+          transform-origin: 0% 50%;
+          transform: scale3d(1, 1, 1);
+        }
+      }
+    }
+  }
+}

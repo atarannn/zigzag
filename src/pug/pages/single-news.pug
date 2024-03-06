@@ -1,0 +1,74 @@
+
+extends ../layout/main
+block variable
+  -
+    var title_page = 'single-news'
+    var id_page = 'id-page-single-news'
+    var class_page = 'class-page-single-news'
+    var breadcrumbsSubitem = [
+      {
+        label: 'single-news',
+        link: pagesLink[0].single-news
+      }
+    ]
+
+block meta
+  title= title_page
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/libs.js')
+  script(defer src='./assets/scripts/vendors.bundle.js')
+  script(defer src='./assets/scripts/index.bundle.js')
+  script(defer src='./assets/scripts/header.bundle.js')
+  script(defer src='./assets/scripts/index.js')
+  script(defer src='./assets/scripts/loader.js')
+  script(defer src='./assets/scripts/single-news-video-poster.js')
+  script(defer src='./assets/scripts/single-news-page-animation.js')
+  script(defer src='./assets/scripts/footer-animation.js')
+
+block content
+  .page__inner-title
+  .single-news__wrapper
+    .single-news
+      .dela-text-24 15.03.23
+      .dela-text-42 Знижки в стоматології, на першому поверсі
+      .single-news-content
+        img(src="./assets/images/news/1-2.jpg" alt="news").single-news-img
+        .single-news-video
+          button(id="play-button" onclick="playVideo()").poster
+            img(src="./assets/images/news/1-3.png" alt="news").poster-img
+          <iframe id="video-iframe" width="560" height="315" src="https://www.youtube.com/embed/_Deq3Cf_0lo?si=xVLP_VbkeCK5BCju" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      .single-news-text
+        .block-text
+          .dela-text-32 Шановні майбутні мешканці!
+          .manrope-text-28-normal Ми раді представити вам найочікуваніший житловий комплекс року - "ЗІҐ ЗАҐ". Запуск продажу останньої черги вже стартував, тож поспішайте, щоб втілити свою мрію про ідеальний дім! Це чудова нагода для всіх, хто мріє про комфортний та сучасний простір для життя у самому серці нашого прекрасного міста.
+        .block-list
+          .dela-text-32 Чому "зіґ заґ" обирають сотні задоволених сімей:
+          ul
+            li.manrope-text-28-normal Зручне розташування: Наш житловий комплекс розташований у зручному місці з розвиненою інфраструктурою. Ви зможете легко дістатися до роботи, школи, садочка та магазинів, зекономивши час на дорогу.
+            li.manrope-text-28-normal Якісні матеріали: Ми пильно стежимо за будівництвом та використовуємо лише найкращі матеріали. Ви можете бути впевнені у надійності та тривалості вашого нового житла.
+            li.manrope-text-28-normal Якісні матеріали: Ми пильно стежимо за будівництвом та використовуємо лише найкращі матеріали. Ви можете бути впевнені у надійності та тривалості вашого нового житла.
+        .only-text
+          .manrope-text-28-normal Не упустіть свій шанс здійснити мрію про власне житло! Станьте часткою дружньої та гармонійної спільноти ЖК "ЗІҐ ЗАҐ". Наші кваліфіковані консультанти з радістю допоможуть вам обрати ідеальний варіант житла, який відповідає всім вашим потребам.
+    .last-news
+      .dela-text-100 Оcтанні новини
+      .news__list
+        a(href="single-news.html").news
+          img(src="./assets/images/news/1-1.png" alt="news").img
+          .dela-text-24 15.03.23
+          .dela-text-42 Відкриття дитячого садочка на території
+          .hover
+            +svg('news-hover')
+        a(href="#").news
+          img(src="./assets/images/news/2-1.png" alt="news").img
+          .dela-text-24 15.03.23
+          .dela-text-42 Знижка для військвих
+          .hover
+            +svg('news-hover')
+block footer
+  include ../includes/footer.pug
+
+block header
+  include ../includes/header.pug

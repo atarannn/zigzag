@@ -1,0 +1,13 @@
+form(data-form-popup autocomplete="off").form
+  .dela-text-42 Зв’язатись з нами
+  .row
+    .form-field.form-field-input(data-field-input data-field-name data-status="field--inactive")
+      input(type='text' name="name" placeholder="Ім'я").form-field__input
+      .input-message(data-input-message)
+    .form-field.disabled.form-field-input(data-field-input data-field-phone data-status="field--inactive")
+      input(type='text' name="phone" placeholder="Телефон").form-field__input
+      .mask-absolute.js-mask-absolute Телефон
+      .input-message(data-input-message)
+  button( type="submit" data-btn-submit).submit-btn.btn-style
+    include ../../includes/blue-btn
+    span(data-btn-submit-text) Надіслати↗

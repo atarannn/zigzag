@@ -1,0 +1,172 @@
+
+extends ../layout/main
+block variable
+  -
+    var title_page = 'about'
+    var id_page = 'id-page-about'
+    var class_page = 'class-page-about'
+    var breadcrumbsSubitem = [
+      {
+        label: 'about',
+        link: pagesLink[0].about
+      }
+    ]
+
+block meta
+  title= title_page
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/libs.js')
+  script(defer src='./assets/scripts/vendors.bundle.js')
+  script(defer src='./assets/scripts/index.bundle.js')
+  script(defer src='./assets/scripts/header.bundle.js')
+  script(defer src='./assets/scripts/index.js')
+  script(defer src='./assets/scripts/loader.js')
+  script(defer src='./assets/scripts/about-animation.js')
+  script(defer src='./assets/scripts/about-section-slider.js')
+  script(defer src='./assets/scripts/about-section-4-text.js')
+  script(defer src='./assets/scripts/footer-animation.js')
+
+block content
+  .page__inner-title
+    .title__wrapper
+      img(src='./assets/images/home/section-4/title-1.png' alt='title').title-1
+      img(src='./assets/images/home/section-4/title-2.png' alt='title').title-2
+      img(src='./assets/images/about/title-decor.png' alt='decor').decor
+  .about__wrapper
+    .about-section-1
+      .about-section-1__top
+        .about-section-1__top__swiper-btn
+          +svg('gallery-arrow').btn(data-prev-btn-1)
+          .about-slider__amount
+            .about-slider__current.dela-text-24
+              span(data-current-num)
+            span.slider__divider.dela-text-24 /
+            span.slider__all.dela-text-24(data-total-num)
+          +svg('gallery-arrow').btn(data-next-btn-1)
+      .about-section-1-swiper.swiper-container
+        .swiper-wrapper
+          .swiper-slide
+            img(src='./assets/images/gallery/slider-2/1-bg.png' alt='decor').decor
+            img(src='./assets/images/about/slider-1/1.png' alt='img').img
+            .swiper-slide__right
+              .dela-text-48 фуд простір
+              .manrope-text-28-normal Кав’ярні та кафе пропонують атмосферу затишку для спілкування та відпочинку, де можна скуштувати вишукані страви та напої.
+          .swiper-slide
+            img(src='./assets/images/gallery/slider-2/1-bg.png' alt='decor').decor
+            img(src='./assets/images/about/slider-1/2.png' alt='img').img
+            .swiper-slide__right
+              .dela-text-48 Простір шопінгу
+              .manrope-text-28-normal Від модних та ексклюзивних товарів до простого і практичного — у вас буде можливість знайти все, що відповідає вашому смаку та потребам.
+          .swiper-slide
+            img(src='./assets/images/gallery/slider-2/1-bg.png' alt='decor').decor
+            img(src='./assets/images/about/slider-1/3.png' alt='img').img
+            .swiper-slide__right
+              .dela-text-48 простір краси
+              .manrope-text-28-normal Відпочиньте і підкресліть свою унікальність у приємній атмосфері.
+          .swiper-slide
+            img(src='./assets/images/gallery/slider-2/1-bg.png' alt='decor').decor
+            img(src='./assets/images/about/slider-1/4.png' alt='img').img
+            .swiper-slide__right
+              .dela-text-48 простір освіти
+              .manrope-text-28-normal Тут ви зможете поглибити свої знання, розвинути таланти та дослідити нові сфери інтересу.
+          .swiper-slide
+            img(src='./assets/images/gallery/slider-2/1-bg.png' alt='decor').decor
+            img(src='./assets/images/about/slider-1/5.png' alt='img').img
+            .swiper-slide__right
+              .dela-text-48 Простір побутових послуг
+              .manrope-text-28-normal Вони створені для того, щоб спростити ваші щоденні справи та забезпечити гармонію в вашому домі.
+    .about-section-2
+      .about-section-2__head
+        .dela-text-100.yellow-text  насичені будні
+        .dela-text-100.big-text в урбан
+        .dela-text-100.big-text просторі
+      .swiper-container.about-section-2-swiper
+        img(src='./assets/images/about/slider-2/bg.png' alt='img').bg
+        .swiper-pagination.about-section-2-swiper-pagination__wrapper
+          .swiper-pagination.about-section-2-swiper-pagination
+        .about-section-2__swiper-btn
+          .swiper-prev(data-prev-btn-2)
+            +svg('about-slider-2-arrow')
+          .swiper-next(data-next-btn-2)
+            +svg('about-slider-2-arrow')
+        .swiper-wrapper
+          .swiper-slide
+            .top
+              img(src='./assets/images/about/slider-2/1.png' alt='img')
+            .bottom
+              .dela-text-48 07:00
+              .manrope-text-48-normal Ранкове зайняття у спортзалі всередині комплексу.
+          .swiper-slide
+            .top
+              img(src='./assets/images/about/slider-2/2.png' alt='img')
+            .bottom
+              .dela-text-48 08:00
+              .manrope-text-48-normal Сніданок у затишноку кафе Фуд простору.
+          .swiper-slide
+            .top
+              img(src='./assets/images/about/slider-2/3.png' alt='img')
+            .bottom
+              .dela-text-48 09:00
+              .manrope-text-48-normal Початок робочого дня у власному кабінеті на даху.
+          .swiper-slide
+            .top
+              img(src='./assets/images/about/slider-2/4.png' alt='img')
+            .bottom
+              .dela-text-48 13:00
+              .manrope-text-48-normal Обід у Фуд просторі з друзями.
+          .swiper-slide
+            .top
+              img(src='./assets/images/about/slider-2/5.png' alt='img')
+            .bottom
+              .dela-text-48 18:00
+              .manrope-text-48-normal Твій новий образ у Просторі краси.
+          .swiper-slide
+            .top
+              img(src='./assets/images/about/slider-2/6.png' alt='img')
+            .bottom
+              .dela-text-48 19:00
+              .manrope-text-48-normal Вечеря у затишному ресторані.
+          .swiper-slide
+            .top
+              img(src='./assets/images/about/slider-2/7.png' alt='img')
+            .bottom
+              .dela-text-48 20:00
+              .manrope-text-48-normal Прогулянка з пухнастиком.
+          .swiper-slide
+            .top
+              img(src='./assets/images/about/slider-2/8.png' alt='img')
+            .bottom
+              .dela-text-48 21:00
+              .manrope-text-48-normal Перегляд фільму у movie-холі.
+
+    .about-section-3
+      img(src='./assets/images/about/1.png' alt='img').img
+      .about-section-3__text
+        .col
+          .dela-text-100 новий
+          .dela-text-100 стиль
+          .dela-text-100 життя
+        .manrope-text-28 Ми створили для вас сучасний, багатофункціональний протсір, який закриватиме всі потреби життя у місті.
+        a(href="#").btn-style
+          include ../includes/pink-btn
+          span Обрати квартиру ↗
+    .about-section-4
+      .block-style-column__info-wrapper.block-style-column__info-wrapper--mobile
+        img(src='./assets/images/about/decor-top.png' alt='img').decor-top
+        img(src='./assets/images/about/decor-bottom.png' alt='img').decor-bottom
+        input(type="range", name="aaaa")
+        include ../includes/block-style-column-mobile-image-scroller-svg.pug
+        .block-style-column__mobile-scroller
+          img(src='./assets/images/about/2-mob.png' alt='img').img
+      .block-style-column__info-wrapper.block-style-column__info-wrapper--desktop
+        img(src='./assets/images/about/2.png' alt='img').img
+
+
+block footer
+  include ../includes/footer.pug
+
+block header
+  include ../includes/header.pug

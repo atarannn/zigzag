@@ -1,0 +1,158 @@
+
+extends ../layout/main
+block variable
+  -
+    var title_page = 'home'
+    var id_page = 'home-page'
+    var class_page = 'home'
+
+
+block meta
+  title= 'Главная'
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/libs.js')
+  script(defer src='./assets/scripts/vendors.bundle.js')
+  script(defer src='./assets/scripts/index.bundle.js')
+  script(defer src='./assets/scripts/header.bundle.js')
+  script(defer src='./assets/scripts/index.js')
+  script(defer src='./assets/scripts/loader.js')
+  script(defer src='./assets/scripts/home-animation.js')
+  script(defer src='./assets/scripts/footer-animation.js')
+
+block content
+  section.section-1
+    <video loop autoplay muted >
+      <source src="./assets/images/home/section-1/video.mov" type="video/mp4">
+    </video>
+    .section-1__title__wrapper
+      img(src="./assets/images/home/section-1/title-1.png" alt="title-1").title-1
+      img(src="./assets/images/home/section-1/title-2.png" alt="title-2").title-2
+    img(src="./assets/images/home/section-1/decor.png" alt="title-1").decor
+    a(href="#").btn-style
+      include ../includes/pink-btn
+      span Обрати квартиру ↗
+  section.section-2
+    .section-2__title__wrapper
+      img(src="./assets/images/home/section-2/title.png" alt="title").title
+    .section-2__inner
+      .section-2__inner-text
+        .manrope-text-28 Ідеальний компроміс між затишком та активним міським життям, спокоєм та насиченими буднями, вірністю традиціям та слідуванням новим трендам.
+        a(href="project.html").link-style
+          span дізнатися більше ↗
+      .section-2__inner-img
+        a(href="project.html").link-style
+          span дізнатися
+          span більше ↗
+        img(src="./assets/images/home/section-2/img.png" alt="img").img
+        img(src="./assets/images/home/section-2/decor.png" alt="decor").decor
+
+  section.section-3
+    .section-3__title__wrapper
+      img(src="./assets/images/home/section-3/title-1.png" alt="title").title-1
+      img(src="./assets/images/home/section-3/title-2.png" alt="title").title-2
+    .section-3__inner
+      .section-3__inner-img
+        picture
+          source(srcset="./assets/images/home/section-3/img.png" media="(min-width: 1024px)")
+          source(srcset="./assets/images/home/section-3/img-1024.png" media="(min-width: 680px)")
+          img(src="./assets/images/home/section-3/img-680.png" alt="img").img
+        img(src="./assets/images/home/section-3/decor.png" alt="decor").decor
+      .section-3__inner-text
+        .col
+          .manrope-text-28 Ми розуміємо що сучасне житло - це не просто квадратні метри, це простір в якому хочеться проводити час, творити, розвиватися та будувати власне майбутнє.
+          .manrope-text-28 Тому на етапі планування житлових приміщень, ми ставили собі за ціль створити сучасний, багатофункціональний протсір, який закриватиме всі потреби життя у місті.
+        a(href="3d.html").btn-style.btn-style-2
+          include ../includes/pink-btn
+          span детальніше ↗
+  section.section-4
+    .section-4__title__wrapper
+      img(src="./assets/images/home/section-4/title-1.png" alt="title").title-1
+      .title-2__wrapper
+        img(src="./assets/images/home/section-4/title-2.png" alt="title").title-2
+        img(src="./assets/images/home/section-4/decor.png" alt="decor").decor
+    .section-4__inner
+      .section-4__inner-text
+        .col
+          .manrope-text-28 Далі ми пішли глибше та обʼєднали людей спільним просторому назвавши це “Урбан галерея”
+          .manrope-text-28 Тому на етапі планування житлових приміщень, ми ставили собі за ціль створити сучасний, багатофункціональний протсір, який закриватиме всі потреби життя у місті.
+        a(href="about.html").btn-style.btn-style-2
+          include ../includes/pink-btn
+          span детальніше ↗
+      picture
+        source(srcset="./assets/images/home/section-4/img.png" media="(min-width: 1024px)")
+        source(srcset="./assets/images/home/section-4/img-1024.png" media="(min-width: 680)")
+        img(src="./assets/images/home/section-4/img-680.png" alt="img").img
+  section.section-5
+    .section-5__title__wrapper
+      picture
+        source(srcset="./assets/images/home/section-5/title.png" media="(min-width: 680px)")
+        img(src="./assets/images/home/section-5/title-680.png" alt="title").title
+    .section-5__text
+      img(src="./assets/images/home/section-5/pin-1.png" alt="decor").decor-1
+      img(src="./assets/images/home/section-5/pin-2.png" alt="decor").decor-2
+      a(href="location.html").link-style
+        span.desk дізнатися
+        span.desk більше ↗
+        span.mob дізнатися більше ↗
+      .manrope-text-28 Урбан простір "Зиґ Заґ" розташований майже в самому центрі Рівного, поруч з основними транспортними розвʼязками міста.
+    .section-5__map
+      img(src="./assets/images/home/section-5/decor-top.png" alt="decor").decor-top
+      img(src="./assets/images/home/section-5/map.jpg" alt="map").map
+      img(src="./assets/images/home/section-5/decor-bottom.png" alt="decor").decor-bottom
+  section.section-6
+    .section-6__title__wrapper
+      picture
+        source(srcset="./assets/images/home/section-6/title.png" media="(min-width: 1600px)")
+        img(src="./assets/images/home/section-6/title-1360.png" alt="title").title
+      img(src="./assets/images/home/section-6/bg-bottom.png" alt="decor").decor
+    .section-6__inner
+      img(src="./assets/images/home/section-6/people.png" alt="decor").decor-people
+    .section-6__bottom
+      img(src="./assets/images/home/section-6/bg-top.png" alt="decor").decor
+      .section-6__bottom-text
+        img(src="./assets/images/home/section-6/logo.png" alt="logo").logo
+        .col
+          .manrope-text-28 ми надійний девелопер на українському ринку, ми створюємо простір, в якому люди забувають про сіру буденність та насолодження життям
+          .manrope-text-28 ми прагнемо до інноваційних рішень, щоб наші клієнти могли насолоджуватися кожним моментом у своєму власному "світі див".
+  section.section-7
+    .section-7__title__wrapper
+      img(src="./assets/images/home/section-7/title.png" alt="title-1").title
+    // на мобілці виводити лише 2 новини
+    .news__list
+      a(href="single-news.html").news
+        img(src="./assets/images/news/1-1.png" alt="news").img
+        .dela-text-24 15.03.23
+        .dela-text-42 Відкриття дитячого садочка на території
+        .hover
+          +svg('news-hover')
+      a(href="#").news
+        img(src="./assets/images/news/2-1.png" alt="news").img
+        .dela-text-24 15.03.23
+        .dela-text-42 Знижка для військвих
+        .hover
+          +svg('news-hover')
+      a(href="#").news
+        img(src="./assets/images/news/3-1.png" alt="news").img
+        .dela-text-24 15.03.23
+        .dela-text-42 Насадження дерев та кущів на території жк
+        .hover
+          +svg('news-hover')
+      a(href="#").news
+        img(src="./assets/images/news/4-1.png" alt="news").img
+        .dela-text-24 15.03.23
+        .dela-text-42 Знижки в стоматології, на першому поверсі
+        .hover
+          +svg('news-hover')
+
+
+
+block footer
+  include ../includes/footer.pug
+
+block header
+  include ../includes/header.pug
+
+

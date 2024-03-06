@@ -1,0 +1,52 @@
+[id*="contacts"] {
+  .contacts {
+    overflow: visible;
+  }
+
+  footer .contacts {
+    .contacts-page__footer {
+      display: flex;
+    }
+
+    .all-pages__footer {
+      display: none;
+    }
+
+    .title__wrapper {
+      .title {
+        @include to(1024px) {
+          height: var(--text-2);
+        }
+      }
+
+      @include to(1024px) {
+        position: static;
+      }
+    }
+
+    .form__wrapper {
+      @include to(1024px) {
+        width: 100%;
+        margin-top: var(--offset-40);
+      }
+
+      .form {
+         @include to(1024px) {
+           width: 70%;
+           right: 50%;
+           transform: translateY(-50%) translateX(50%);
+         }
+
+        @include to(680px) {
+          width: calc(100% - var(--fields) * 2);
+        }
+      }
+    }
+  }
+
+  footer .footer {
+    @include to(1024px) {
+      margin-top: 10%;
+    }
+  }
+}
