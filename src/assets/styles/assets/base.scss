@@ -24,6 +24,10 @@ body {
   height: auto;
   //overflow-y: auto;
   background: var(--blue-color);
+
+  .page__content {
+    overflow-x: hidden;
+  }
 }
 body input, body textarea {
 	border: #666 1px solid;

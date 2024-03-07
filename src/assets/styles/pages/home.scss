@@ -53,6 +53,11 @@
       object-fit: cover;
       //pointer-events: none;
       z-index: -1;
+
+      @include to(1024px) {
+        height: calc(100vh - var(--decor-h)/2);
+        height: calc(var(--vh, 1vh) * 100 - var(--decor-h)/2);
+      }
     }
 
     .decor {
