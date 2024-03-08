@@ -1,4 +1,59 @@
-document.body.onload = function () {
+const $scroller = document.body;
+
+// Функція, яка викликає textAnimation після початку прокрутки
+function onScroll() {
+  textAnimation('.section-2__inner-text .manrope-text-28, .section-3__inner-text .col .manrope-text-28, .section-4__inner-text .col .manrope-text-28, .section-5__text .manrope-text-28, .section-6__bottom-text .col .manrope-text-28', $scroller);
+  window.removeEventListener('scroll', onScroll);
+}
+
+window.addEventListener('scroll', onScroll);
+
+// Функція для анімації тексту
+function textAnimation(selector, $scroller) {
+  document.querySelectorAll(selector).forEach(text => {
+    let mathM = text.innerHTML.match(/<\s*(\w+\b)(?:(?!<\s*\/\s*\1\b)[\s\S])*<\s*\/\s*\1\s*>|\S+/g);
+    if (mathM === null) return;
+    mathM = mathM.map(el => `<span class="first-span" style="display:inline-flex; overflow: hidden"><span>${el}</span></span>`);
+    text.innerHTML = mathM.join(' ');
+
+    let tl;
+
+    if (document.documentElement.clientWidth > 1024) {
+      tl = gsap
+        .timeline({
+          paused: true,
+          scrollTrigger: {
+            scroller: $scroller,
+            trigger: text,
+            start: '100% bottom',
+            once: true,
+          },
+        })
+        .fromTo(
+          text.querySelectorAll('span>span'),
+          { yPercent: 100 },
+          { yPercent: 0, stagger: .01, duration: .5, ease: "power4.out" }
+        );
+    } else {
+      tl = gsap
+        .timeline({
+          paused: true,
+          scrollTrigger: {
+            scroller: $scroller,
+            trigger: text,
+            start: '80% bottom',
+            once: true,
+          },
+        })
+        .fromTo(
+          text.querySelectorAll('span>span'),
+          { yPercent: 100 },
+          { yPercent: 0, stagger: .01, duration: .5, ease: "power4.out" }
+        );
+    }
+  });
+}
+
   // window.setTimeout(() => {
 //   document.body.classList.add('loading');
 //
@@ -13,51 +68,9 @@ document.body.onload = function () {
 //   tl.play();
 // }, 4000);
 
-  function textAnimation(selector, $scroller) {
-    document.querySelectorAll(selector).forEach(text => {
-      let mathM = text.innerHTML.match(/<\s*(\w+\b)(?:(?!<\s*\/\s*\1\b)[\s\S])*<\s*\/\s*\1\s*>|\S+/g);
-      if (mathM === null) return;
-      mathM = mathM.map(el => `<span class="first-span" style="display:inline-flex; overflow: hidden"><span>${el}</span></span>`);
-      text.innerHTML = mathM.join(' ');
-
-      if (document.documentElement.clientWidth > 1024) {
-        let tl = gsap
-          .timeline({
-            paused: true,
-            scrollTrigger: {
-              scroller: $scroller || document.body,
-              trigger: text,
-              start: '100% bottom',
-              once: true,
-            },
-          })
-          .fromTo(
-            text.querySelectorAll('span>span'),
-            { yPercent: 100 },
-            { yPercent: 0, stagger: .01, duration: .5, ease: "power4.out" }
-          );
-      } else {
-        let tl = gsap
-          .timeline({
-            paused: true,
-            scrollTrigger: {
-              scroller: $scroller || document.body,
-              trigger: text,
-              start: '80% bottom',
-              once: true,
-            },
-          })
-          .fromTo(
-            text.querySelectorAll('span>span'),
-            { yPercent: 100 },
-            { yPercent: 0, stagger: .01, duration: .5, ease: "power4.out" }
-          );
-      }
-    });
-  }
-  textAnimation('.section-2__inner-text .manrope-text-28, .section-3__inner-text .col .manrope-text-28, .section-4__inner-text .col .manrope-text-28, .section-5__text .manrope-text-28, .section-6__bottom-text .col .manrope-text-28');
 
 // блок 1
+window.onLoad = function () {
   function pinAnimation1() {
     const section1 = document.querySelector('.section-1');
     gsap
