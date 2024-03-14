@@ -56,15 +56,13 @@ function textAnimation(selector, $scroller) {
 
 // блок 1
 
-window.setTimeout(() => {
-  var video = document.getElementById('myVideoDesk');
-  video.play();
-}, 1400);
+// window.setTimeout(() => {
+//   var video = document.getElementById('myVideoDesk');
+//   video.play();
+// }, 1400);
 
-window.setTimeout(() => {
-  var videoMob = document.getElementById('myVideoMob');
-  videoMob.play();
-}, 1000);
+document.getElementById('myVideoMob').play();
+
 window.setTimeout(() => {
   document.body.classList.add('loading');
 
